@@ -1,3 +1,4 @@
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
@@ -32,6 +33,9 @@ android {
         }
     }
     compileOptions {
+        isCoreLibraryDesugaringEnabled = true
+    }
+    compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
@@ -46,9 +50,14 @@ dependencies {
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.kotlinx.datetime)
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
+
     /*Dagger Hilt*/
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
     kapt(libs.kotlinx.metadata.jvm)
+    implementation(libs.androidx.hilt.navigation.compose)
+
     debugImplementation(libs.compose.ui.tooling)
 }
