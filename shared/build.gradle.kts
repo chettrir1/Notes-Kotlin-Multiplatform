@@ -14,7 +14,7 @@ kotlin {
             }
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -50,10 +50,20 @@ kotlin {
     }
 }
 
+sqldelight {
+    database("NoteDatabase") {
+        packageName = "com.example.noteskmm.database"
+        sourceFolders= listOf("sqldelight")
+    }
+}
+
 android {
     namespace = "com.example.noteskmm"
     compileSdk = 34
     defaultConfig {
         minSdk = 24
     }
+}
+dependencies {
+    implementation("androidx.core:core-ktx:+")
 }
