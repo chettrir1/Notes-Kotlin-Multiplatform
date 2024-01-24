@@ -65,5 +65,5 @@ android {
     }
 }
 dependencies {
-    implementation("androidx.core:core-ktx:+")
+    implementation(libs.androidx.core.ktx)
 }
