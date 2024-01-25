@@ -1,5 +1,6 @@
 [versions]
 agp = "8.1.1"
+coreKtx = "1.12.0"
 coroutinesVersion = "1.7.3"
 dateTimeVersion = "0.4.1"
 desugar_jdk_libs = "2.0.4"
@@ -16,6 +17,7 @@ sqlDelightVersion = "1.5.5"
 
 [libraries]
 android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqlDelightVersion" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 desugar_jdk_libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
@@ -33,6 +35,7 @@ kotlinx-datetime-0_4_0 = { module = "org.jetbrains.kotlinx:kotlinx-datetime", ve
 kotlinx-metadata-jvm = { module = "org.jetbrains.kotlinx:kotlinx-metadata-jvm", version.ref = "kotlinxMetadataJvm" }
 native-driver = { module = "com.squareup.sqldelight:native-driver", version.ref = "sqlDelightVersion" }
 runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "sqlDelightVersion" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version = "2.7.0" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
